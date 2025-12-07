@@ -1,0 +1,62 @@
+
+
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e6e6e6;
+    --text-black-900: #1e1d20;
+    --text-black-700: #1b1a26;
+  }
+
+.dark {
+    --bg-black-900: #222222;
+    --bg-black-100: #292929;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+  }
+
+/* Social Icons Container */
+.social-icons  {
+    display: flex;
+    gap: 12px; /* Space between icons */
+    margin: 15px 0;
+}
+
+/* Common Styling for Icons */
+.social-icons  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* Small Icon Size */
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--text-black-700);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); /* Soft Transparent Background */
+    backdrop-filter: blur(5px); /* Glassmorphism Effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Specific Colors for Each Icon */
+.facebook { background-color: #1877F2; }  /* Facebook Blue */
+.twitter { background-color: #1DA1F2; }   /* Twitter Blue */
+.linkedin { background-color: #0077B5; }  /* LinkedIn Blue */
+
+/* Hover Effects */
+
+/* 3D Hover Effect */
+.social-icons a:hover {
+    background-color: var(--skin-color);
+    transform: translateY(-5px) scale(1.1); /* Lifts and scales up */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon Effect */
+.social-icons a:hover i {
+    transform: translateY(-2px) scale(1.2); /* Slight pop-out effect */
+    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.6);
+}
