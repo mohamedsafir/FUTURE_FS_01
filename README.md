@@ -53,7 +53,7 @@ SafirPortfolio/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/safir-portfolio.git
+git clone https://github.com/mohamedsafir/FUTRE_FS_01.git
 ```
 
 2. Open the project folder.
@@ -68,7 +68,7 @@ Feel free to reach out for collaboration or project discussions!
 
 - **Website Contact Form**: [Visit here](https://safirportfolio.netlify.app/#contact)
 - **Email**: mohamedsafir6237@gmail.com
-- **LinkedIn / Instagram / GitHub**: ***********************
+- **LinkedIn / GitHub**: *https://www.linkedin.com/in/mohamed-safir
 
 ---
 
