@@ -28,7 +28,10 @@ This website is built to create an online presence, demonstrate professional ski
 - CSS3
 - JavaScript
 - (Optional: Bootstrap if used)
-- Netlify (for hosting and deployment)
+- Node.js
+- Express.js
+- MongoDB Database Connectivity
+- vercel (for hosting and deployment)
 
 ---
 
