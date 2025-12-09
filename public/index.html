@@ -64,7 +64,8 @@
                   <div class="home-info">
                      <h3 class="hello">Hello ,My name is <span class="name">Mohamed safir</span></h3>
                      <h3 class="my-profession">I' m a <span class="typing">Web developer</span></h3>
-                     <p>I'm a passionate Full Stack Developer with extensive hands-on experience in crafting modern, responsive,
+                     <p>I'm a passionate Full Stack Developer with extensive hands-on experience in crafting modern,
+                        responsive,
                         and user-friendly digital solutions.
                         My expertise lies in website design and development, graphics design, and delivering creative,
                         high-quality results that bring ideas to life.
@@ -80,7 +81,7 @@
                      <a href="#contact" class="btn hire-me">Hire me</a>
                   </div>
                   <div class="home-img">
-                     <img src="./image/photos.jpg" alt=""> <!-- Your img -->
+                     <img src="./image/photos1.png" height="200px" alt=""> <!-- Your img -->
                   </div>
                </div>
             </div>
@@ -99,13 +100,15 @@
                      <div class="row">
                         <div class="about-text padd-15">
                            <h3>I'm Mohamed Safir — <span class="typing">Full Stack Developer</span></h3>
-                           <p>I specialize in both <b>Front-end Development — HTML, CSS, JavaScript, React.js, Bootstrap,
-                              ,Tailwind CSS and Typescript</b> — and <b>Back-end Development — Python, Node.js, Express.js, Django, and
-                              FastAPI</b> — along with MySQL and MongoDB for database management.
+                           <p>I specialize in both <b>Front-end Development — HTML, CSS, JavaScript, React.js,
+                                 Bootstrap,
+                                 ,Tailwind CSS and Typescript</b> — and <b>Back-end Development — Python, Node.js,
+                                 Express.js, Django, and
+                                 FastAPI</b> — along with MySQL and MongoDB for database management.
 
                               With a strong foundation in modern web technologies, I can <b>design and develop dynamic,
-                              scalable, and responsive web applications, build RESTful APIs, integrate databases, and
-                              create end-to-end full stack solutions</b> that provide seamless user experiences.
+                                 scalable, and responsive web applications, build RESTful APIs, integrate databases, and
+                                 create end-to-end full stack solutions</b> that provide seamless user experiences.
 
                               I’m passionate about continuous learning, innovation, and leveraging technology to build
                               impactful digital products that solve real-world problems.
@@ -129,8 +132,9 @@
                            </div>
                            <div class="row">
                               <div class="buttons padd-15">
-                                 <a href="/cv/Mohamed-Safir-N-Resume.pdf" target="_blank" preview="MohamedSafir-cv"
-                                    class="btn">Preview
+                                 <a href="/public/cv/Mohamed-Safir-N-resume.pdf"
+                                    src="/public/cv/Mohamed-Safir-N-resume.pdf" target="_blank"
+                                    preview="MohamedSafir-cv" class="btn">Preview
                                     Resume</a>
                                  <a href="#contact" class="btn hire-me">Hire me</a>
                               </div>
@@ -295,7 +299,8 @@
                                           <li class="Intern-para"> Collaborated virtually with mentors, completing the
                                              final project ahead of schedule, demonstrating strong self-learning,
                                              problem-solving, and applied AI skills.</li>
-                                          <li class="Intern-para">Earned IBM SkillsBuild Collabrated certification, validating
+                                          <li class="Intern-para">Earned IBM SkillsBuild Collabrated certification,
+                                             validating
                                              practical proficiency in AI fundamentals and applied AI solutions.</li>
                                        </p>
                                     </div>
@@ -530,36 +535,32 @@
                </div>
                <!-- contact info item start -->
             </div>
-            <form enctype="multipart/form-data" action="/send-message" id="contactForm" method="POST">
+            <form id="contactForm" method="POST" action="/api/contact" enctype="multipart/form-data" >
                <div class="row">
                   <div class="contact-form padd-15">
                      <div class="row">
                         <div class="form-item col-6 padd-15">
                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Name" id="name" name="name"
-                                 required />
+                              <input type="text" class="form-control" placeholder="Name" id="name" name="name" required />
                            </div>
                         </div>
                         <div class="form-item col-6 padd-15">
                            <div class="form-group">
-                              <input type="email" class="form-control" placeholder="Email" id="email" name="email"
-                                 required />
+                              <input type="email" class="form-control" placeholder="Email" id="email" name="email" required />
                            </div>
                         </div>
                      </div>
                      <div class="row">
                         <div class="form-item col-12 padd-15">
                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Subject" id="subject" name="subject"
-                                 required />
+                              <input type="text" class="form-control" placeholder="Subject" id="subject" name="subject" required />
                            </div>
                         </div>
                      </div>
                      <div class="row">
                         <div class="form-item col-12 padd-15">
                            <div class="form-group">
-                              <textarea class="form-control" placeholder="Message" id="message" name="message"
-                                 required></textarea>
+                              <textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
                            </div>
                         </div>
                      </div>
@@ -594,8 +595,6 @@
             <span class="color-5" data-color="#f021b2"></span>
          </div>
       </div>
-
-
       <!-- ===============  style structure switcher end ==================-->
 
       <!-- js files -->
@@ -604,6 +603,8 @@
       <script src="js/style-switcher.js"></script>
       <script src="/portfolio/server.js"></script>
       <script src="/server.js"></script>
+      <script src="./js/contact.js"></script>
+      <script src="/api/contact.js"></script>
 </body>
 
 </html>

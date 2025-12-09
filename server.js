@@ -36,11 +36,11 @@ const Contact = mongoose.model("Contact", ContactSchema);
 
 // Project Schema (For Project Updates)
 const ProjectSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    description: String,
-    imageUrl: String, // URL to the image
-    projectLink: String, // URL to GitHub or Live Demo
-    category: String   // e.g., "Web Design", "App Development"
+  title: { type: String, required: true },
+  description: String,
+  imageUrl: String, // URL to the image
+  projectLink: String, // URL to GitHub or Live Demo
+  category: String   // e.g., "Web Design", "App Development"
 });
 const Project = mongoose.model('Project', ProjectSchema);
 
@@ -99,23 +99,27 @@ app.post("/send-message", async (req, res) => {
 
 // B. GET Projects Route (Frontend calls this to display projects)
 app.get('/api/projects', async (req, res) => {
-    try {
-        const projects = await Project.find(); // Fetch all projects from DB
-        res.json(projects);
-    } catch (error) {
-        res.status(500).json({ message: "Error fetching projects" });
-    }
+  try {
+    const projects = await Project.find(); // Fetch all projects from DB
+    res.json(projects);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching projects" });
+  }
 });
-
 // C. POST Project Route (You use this to ADD projects to DB)
-app.post('/api/add-project', async (req, res) => {
-    try {
-        const newProject = new Project(req.body);
-        await newProject.save();
-        res.status(200).json({ message: "Project Added Successfully!" });
-    } catch (error) {
-        res.status(500).json({ message: "Error adding project" });
-    }
+app.post('/api/project', async (req, res) => {
+  try {
+    const newProject = new Project(req.body);
+    await newProject.save();
+    res.status(200).json({ message: "Project Added Successfully!" });
+  } catch (error) {
+    res.status(500).json({ message: "Error adding project" });
+  }
+});
+// your contact route for local testing
+app.post("/api/contact", (req, res) => {
+  console.log(req.body);
+  res.json({ ok: true });
 });
 
 // --- 6. START SERVER ---

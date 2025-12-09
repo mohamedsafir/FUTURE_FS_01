@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // 3. Send data to your Node.js server
-                const response = await fetch('http://localhost:3000/send-message', { // FORCE PORT 3000
+                const response = await fetch('/send-message', { // FORCE PORT 3000
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, subject, message })
@@ -86,7 +86,7 @@ async function loadProjects() {
     if (!container) return; // Stop if we are not on the portfolio page
 
     try {
-        const response = await fetch('http://localhost:3000/api/projects');
+        const response = await fetch('/api/projects');
         const projects = await response.json();
 
         // Clear "Loading..." text
@@ -135,7 +135,7 @@ async function loadProjects() {
     if (!container) return; // Stop if we are not on the portfolio page
 
     try {
-        const response = await fetch('http://localhost:3000/api/projects');
+        const response = await fetch('/api/projects');
         const projects = await response.json();
 
         // Clear "Loading..." text

@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(this);
         const params = new URLSearchParams(formData);
 
+        const btn = this.querySelector("button[type='submit']");
+        if (btn) btn.textContent = "Sending...";
+
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
@@ -18,18 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: params.toString(),
             });
 
-            const data = await res.json();
+            const data = await res.json().catch(() => ({}));
+            console.log("API status:", res.status, data);
 
             if (res.ok) {
                 alert("Message sent successfully!");
                 this.reset();
             } else {
-                console.error("Backend error:", data);
-                alert("Something went wrong. Please try again.");
+                alert(
+                    data.message
+                        ? `Server error: ${data.message}`
+                        : "Server returned an error. Check logs."
+                );
             }
         } catch (err) {
             console.error("Network error:", err);
-            alert("Network error. Please try later.");
+            alert("Error connecting to server."); // only real network failure now
+        } finally {
+            if (btn) btn.textContent = "Send Message";
         }
     });
 });
