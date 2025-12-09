@@ -4,7 +4,7 @@
 
 Welcome to the **Safir Portfolio Website** — a clean, modern personal portfolio showcasing skills, projects, and services.
 
-🌐 **Live Website:** [https://www.safirportfolio.com](https://safirportfolio.netlify.app/)
+🌐 **Live Website:** [https://www.safirportfolio.com](https://safirportfolio.vercel.app/)
 
 ---
 
